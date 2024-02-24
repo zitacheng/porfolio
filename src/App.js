@@ -1,12 +1,13 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, {useState, useEffect} from 'react';
+import i18n from "i18next";
 import {experiences} from './constant.js';
 import www from './Assets/www.png';
 import googleplay from './Assets/googleplay.webp';
 import appstore from './Assets/appstore.png';
 import email from './Assets/email.png';
 import insta from './Assets/instagram.png';
-import octopus from './Assets/octopus.webp';
+import github from './Assets/github.png';
 import lkdn from './Assets/lkdn.png';
 import youtube from './Assets/youtube.png';
 import zita from './Assets/zita.JPG';
@@ -26,11 +27,14 @@ import Col from 'react-bootstrap/Col';
 import Carousel from 'react-bootstrap/Carousel';
 import Badge from 'react-bootstrap/Badge';
 import Stack from 'react-bootstrap/Stack';
+import { useTranslation } from "react-i18next";
+import './i18n.js';
 
 function App() {
 
   const [project, setProjet] = useState(experiences[0]);
   const [loading, setLoading] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     return () => {
@@ -45,8 +49,8 @@ function App() {
           <Navbar.Toggle aria-controls="basic-navbar-nav "/>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav>
-              <Nav.Link className="text-center menuItem" href="#experience">EXPÉRIENCES</Nav.Link>
-              <Nav.Link className="text-center menuItem" href="#about">À PROPOS</Nav.Link>
+              <Nav.Link className="text-center menuItem text-uppercase" href="#experience">{t('exp')}</Nav.Link>
+              <Nav.Link className="text-center menuItem text-uppercase" href="#about">{t('about')}</Nav.Link>
               {/* <Nav.Link className="text-center menuItem" href="#school">COMPÉTENCES</Nav.Link> */}
               {/* <Nav.Link className="text-center"><Image src={fr} className="d-inline-block flag" alt="flag icon"/></Nav.Link> */}
             </Nav>
@@ -60,28 +64,28 @@ function App() {
               <Image src={dark} text="First slide" className="slideImg"/>
               <Carousel.Caption>
                 <h1 className="mx-auto text-center title typewriter mt-4">Zita Athomas</h1>
-                <h4 className="mx-auto text-center sub typewriter mt-2">Développeuse Web / Mobile</h4>
+                <h4 className="mx-auto text-center sub typewriter mt-2">{t('devMobileWeb')}</h4>
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
             <Image src={yosemite} text="Second slide" className="slideImg"/>
               <Carousel.Caption>
-                <h1 className="mx-auto text-center title typewriter mt-4">Zita Athomas</h1>
-                <h4 className="mx-auto text-center sub typewriter mt-2">Développeuse Web / Mobile</h4>
+                <h1 className="mx-auto text-center title mt-4">Zita Athomas</h1>
+                <h4 className="mx-auto text-center sub mt-2">{t('devMobileWeb')}</h4>
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
             <Image src={apple} text="Third slide" className="slideImg"/>
               <Carousel.Caption>
-                <h1 className="mx-auto text-center title typewriter mt-4">Zita Athomas</h1>
-                <h4 className="mx-auto text-center sub typewriter mt-2">Développeuse Web / Mobile</h4>
+                <h1 className="mx-auto text-center title mt-4">Zita Athomas</h1>
+                <h4 className="mx-auto text-center sub mt-2">{t('devMobileWeb')}</h4>
               </Carousel.Caption>
             </Carousel.Item>
           </Carousel>
         </Col>
       </Row>
       <Row id="experience" className="mx-0 my-4">
-        <h1 className="mx-auto text-center title mt-4">Expériences</h1>
+        <h1 className="mx-auto text-center title mt-4">{t('devMobileWeb')}</h1>
         <h3 className="role text-center mb-4">{project.role}</h3>
         <Col md={2} align="center" className='mt-3'>
           <Row className="mx-2">
@@ -132,43 +136,47 @@ function App() {
         }
       </Row>
       <Row id="about" className="mx-0 aboutBg px-4 mt-4 justify-content-center">
-        <h2 className="mx-auto text-center title my-4 text-white">À propos</h2>
+        <h2 className="mx-auto text-center title my-4 text-white">{t('about')}</h2>
         <Col md={3} className='mt-4'>
           <Image src={zita} className="avatar" roundedCircle/>
           <h4 className='text-white bioTitle mt-3'>Zita Athomas</h4>
-          <h5 className='text-white bioSub mt-3'>Développeuse web / mobile</h5>
+          <h5 className='text-white bioSub mt-3'>{t('devMobileWeb')}</h5>
           <p className='text-white bioDesc mt-4'>
-          Après ma première année de DUT en réseaux et télécommunications, j'ai découvert la programmation et suis devenu passionné par cet univers. J'ai ensuite intégré Epitech, une école d'informatique, dès l'année suivante.<br/><br/>
-          Mon expérience à Epitech m'a permis de développer mon autonomie et d'apprendre rapidement. J'accorde une importance particulière à l'écriture d'un code propre et soigné, ainsi qu'à un design bien pensé.<br/><br/>
-          Si vous avez besoin d'une développeuse web/mobile, n'hésitez pas à me contacter.
+            {t('bio1')}
+          </p>
+          <p className='text-white bioDesc mt-4'>
+            {t('bio2')}
+          </p>
+          <p className='text-white bioDesc mt-4'>
+            {t('bio3')}
           </p>
         </Col>
         <Col md={6} className='mt-4'>
             <ul>
             <li className="">
                   <div className="date">2024</div>
-                  <div className="titleTime">Freelance</div>
-                  <div className="descr">Travaille sur divers projets mobile dont Kornette et Amapop.</div>
+                  <div className="titleTime">{t('freelance')}</div>
+                  <div className="descr">{t('freelanceYear')}</div>
               </li>
               <li className="">
                   <div className="date">2021</div>
                   <div className="titleTime">Akius</div>
-                  <div className="descr">Développeuse Front-end Web au startup Akius.</div>
+                  <div className="descr">{t('akiusRole')}</div>
               </li>
               <li className="">
                   <div className="date">2018</div>
                   <div className="titleTime">CSULB</div>
-                  <div className="descr">Année d'échange à Long Beach aux États-Unis dans le département de l'ingénierie.</div>
+                  <div className="descr">{t('lbYear')}</div>
               </li>
               <li className="">
                   <div className="date">2015</div>
                   <div className="titleTime">Epitech</div>
-                  <div className="descr">École d'expert en ingénierie informatique logicielle.</div>
+                  <div className="descr">{t('epitechM')}</div>
               </li>
               <li className="">
                   <div className="date">2014</div>
-                  <div className="titleTime">IUT Réseaux & Télécommunication</div>
-                  <div className="descr">Découverte du codage.</div>
+                  <div className="titleTime">{t('r&t')}</div>
+                  <div className="descr">{t('discover')}</div>
               </li>
           </ul>
         </Col>
@@ -178,20 +186,20 @@ function App() {
       </Row>
       <Row id="about" className="mx-0 aboutBg px-4 mt-0 justify-content-center">
         <Col md={3}>
-          <h4 className='text-white subTitle mb-3'>Centre d'intérêts</h4>
-          <p className="text-white lang">Snowdoard</p>
+          <h4 className='text-white subTitle mb-3'>{t('hobbies')}</h4>
+          <p className="text-white lang">{t('snow')}</p>
           <p className="text-white lang">Midjourney</p>
-          <p className="text-white lang">Skate</p>
-          <p className="text-white lang">Voyage</p>
+          <p className="text-white lang">{t('skate')}</p>
+          <p className="text-white lang">{t('travel')}</p>
         </Col>
         <Col md={3}>
           <h4 className='text-white subTitle mb-3'>Langues</h4>
-          <p className="text-white lang"><Image src={fr} className="flag mr-3" alt="flag icon"/>Français</p>
-          <p className="text-white lang"><Image src={us} className="flag mr-3" alt="flag icon"/>Chinois</p>
-          <p className="text-white lang"><Image src={cn} className="flag mr-3" alt="flag icon"/>Anglais</p>
+          <p className="text-white lang" onClick={() => i18n.changeLanguage('fr')}><Image src={fr} className="flag mr-3" alt="flag icon"/>{t('fr')}</p>
+          <p className="text-white lang" onClick={() => i18n.changeLanguage('cn')}><Image src={cn} className="flag mr-3" alt="flag icon"/>{t('cn')}</p>
+          <p className="text-white lang" onClick={() => i18n.changeLanguage('en')}><Image src={us} className="flag mr-3" alt="flag icon"/>{t('en')}</p>
         </Col>
         <Col md={3}>
-          <h4 className='text-white subTitle mb-3'>Compétences</h4>
+          <h4 className='text-white subTitle mb-3'>{t('skills')}</h4>
           <Stack direction="horizontal" gap={2} className="justify-content-left mb-4 skills">
             <Badge pill className="badge skillBg">React Native</Badge>
             <Badge pill className="badge skillBg">ReactJs</Badge>
@@ -201,6 +209,7 @@ function App() {
             <Badge pill className="badge skillBg">Back4App</Badge>
             <Badge pill className="badge skillBg">REST</Badge>
             <Badge pill className="badge skillBg">NodeJs</Badge>
+            <Badge pill className="badge skillBg">NextJs</Badge>
             <Badge pill className="badge skillBg">GIT</Badge>
             <Badge pill className="badge skillBg">Stripe</Badge>
             <Badge pill className="badge skillBg">Redux Toolkit</Badge>
@@ -214,7 +223,7 @@ function App() {
       <Row className="footer mx-0 p-4 justify-content-center">
         <a className="footerLink" href="https://www.linkedin.com/in/zita-cheng-864891114/" target="_blank"><Image src={lkdn} className="iconSocial" /></a>
         <a className="footerLink" href="https://www.youtube.com/channel/UCohCdvYekCwfXkMXc6tt8Ag" target="_blank"><Image src={youtube} className="iconSocial" /></a>
-        <a className="footerLink" href="https://github.com/zitacheng" target="_blank"><Image src={octopus} className="iconSocial" /></a>
+        <a className="footerLink" href="https://github.com/zitacheng" target="_blank"><Image src={github} className="iconSocial" /></a>
         <a className="footerLink" href="https://www.instagram.com/yys.zita/" target="_blank"><Image src={insta} className="iconSocial" /></a>
         <a className="footerLink" href="mailto:chengxiedan@gmail.com"><Image src={email} className="iconSocial" /></a>
         <p className="text-white text-center copyright">Copyright @ 2024 Zita athomas. All rights reserved.</p>

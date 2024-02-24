@@ -14,6 +14,8 @@ import apple from './Assets/apple.JPG';
 import dark from './Assets/dark.JPG';
 import yosemite from './Assets/yosemite.JPG';
 import fr from './Assets/fr.png';
+import cn from './Assets/cn.png';
+import us from './Assets/us.png';
 import './App.css';
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav';
@@ -129,9 +131,9 @@ function App() {
           <a className="dlIcon" href={project.google} target="_blank"><Image src={googleplay} className="dlIcon p-0 mr-4" /></a>
         }
       </Row>
-      <Row id="about" className="mx-0 aboutBg px-4 mt-4">
-        <h2 className="mx-auto text-center title mt-4 text-white">À propos</h2>
-        <Col md={3}>
+      <Row id="about" className="mx-0 aboutBg px-4 mt-4 justify-content-center">
+        <h2 className="mx-auto text-center title my-4 text-white">À propos</h2>
+        <Col md={3} className='mt-4'>
           <Image src={zita} className="avatar" roundedCircle/>
           <h4 className='text-white bioTitle mt-3'>Zita Athomas</h4>
           <h5 className='text-white bioSub mt-3'>Développeuse web / mobile</h5>
@@ -141,11 +143,72 @@ function App() {
           Si vous avez besoin d'une développeuse web/mobile, n'hésitez pas à me contacter.
           </p>
         </Col>
-        <Col>
-          <p className='text-white'>School</p>
+        <Col md={6} className='mt-4'>
+            <ul>
+            <li className="">
+                  <div className="date">2024</div>
+                  <div className="titleTime">Freelance</div>
+                  <div className="descr">Travaille sur divers projets mobile dont Kornette et Amapop.</div>
+              </li>
+              <li className="">
+                  <div className="date">2021</div>
+                  <div className="titleTime">Akius</div>
+                  <div className="descr">Développeuse Front-end Web au startup Akius.</div>
+              </li>
+              <li className="">
+                  <div className="date">2018</div>
+                  <div className="titleTime">CSULB</div>
+                  <div className="descr">Année d'échange à Long Beach aux États-Unis dans le département de l'ingénierie.</div>
+              </li>
+              <li className="">
+                  <div className="date">2015</div>
+                  <div className="titleTime">Epitech</div>
+                  <div className="descr">École d'expert en ingénierie informatique logicielle.</div>
+              </li>
+              <li className="">
+                  <div className="date">2014</div>
+                  <div className="titleTime">IUT Réseaux & Télécommunication</div>
+                  <div className="descr">Découverte du codage.</div>
+              </li>
+          </ul>
         </Col>
-        <Col>
-          <p className='text-white'>Hobbies</p>
+        {/* <Col className='mt-4'>
+          <h4 className='text-white subTitle text-center'>Centre d'intérêts</h4>
+         </Col> */}
+      </Row>
+      <Row id="about" className="mx-0 aboutBg px-4 mt-0 justify-content-center">
+        <Col md={3}>
+          <h4 className='text-white subTitle mb-3'>Centre d'intérêts</h4>
+          <p className="text-white lang">Snowdoard</p>
+          <p className="text-white lang">Midjourney</p>
+          <p className="text-white lang">Skate</p>
+          <p className="text-white lang">Voyage</p>
+        </Col>
+        <Col md={3}>
+          <h4 className='text-white subTitle mb-3'>Langues</h4>
+          <p className="text-white lang"><Image src={fr} className="flag mr-3" alt="flag icon"/>Français</p>
+          <p className="text-white lang"><Image src={us} className="flag mr-3" alt="flag icon"/>Chinois</p>
+          <p className="text-white lang"><Image src={cn} className="flag mr-3" alt="flag icon"/>Anglais</p>
+        </Col>
+        <Col md={3}>
+          <h4 className='text-white subTitle mb-3'>Compétences</h4>
+          <Stack direction="horizontal" gap={2} className="justify-content-left mb-4 skills">
+            <Badge pill className="badge skillBg">React Native</Badge>
+            <Badge pill className="badge skillBg">ReactJs</Badge>
+            <Badge pill className="badge skillBg">HTML</Badge>
+            <Badge pill className="badge skillBg">CSS</Badge>
+            <Badge pill className="badge skillBg">Strapi</Badge>
+            <Badge pill className="badge skillBg">Back4App</Badge>
+            <Badge pill className="badge skillBg">REST</Badge>
+            <Badge pill className="badge skillBg">NodeJs</Badge>
+            <Badge pill className="badge skillBg">GIT</Badge>
+            <Badge pill className="badge skillBg">Stripe</Badge>
+            <Badge pill className="badge skillBg">Redux Toolkit</Badge>
+            <Badge pill className="badge skillBg">Android Studio</Badge>
+            <Badge pill className="badge skillBg">XCode</Badge>
+            <Badge pill className="badge skillBg">MySql</Badge>
+            <Badge pill className="badge skillBg">Flutter</Badge>
+          </Stack>
         </Col>
       </Row>
       <Row className="footer mx-0 p-4 justify-content-center">

@@ -52,7 +52,7 @@ export const experiences = [
         google: '',
         link: 'https://getbigfast.club/',
         role: 'Front-end web',
-        tech: ['ReactJs', 'Bootstrap', 'Strapi'],
+        tech: ['ReactJs', 'NextJs', 'Bootstrap', 'Strapi'],
         desc: 'Site de mise en relation avec un mentor pour aider ton business',
     },
     {

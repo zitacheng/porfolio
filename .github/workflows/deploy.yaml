@@ -1,0 +1,33 @@
+name: Reusable workflow build
+
+on:
+    push:
+        branches:
+        - main
+jobs:
+  build-push:
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Log in to registry
+        # This is where you will update the PAT to PAT_TOKEN
+        run: echo "${{ secrets.PAT_TOKEN }}" | docker login ghcr.io -u $ --password-stdin
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Build and push
+        uses: docker/build-push-action@v5
+        env:
+          IMG_NAME: ghcr.io/${{ github.repository }}
+        with:
+          context: ./
+          push: true
+          tags: ghcr.io/${{ github.repository }}:latest
+          cache-from: type=gha
+          cache-to: type=gha,mode=max

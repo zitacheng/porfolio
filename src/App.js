@@ -5,9 +5,11 @@ import www from './Assets/www.png';
 import googleplay from './Assets/googleplay.webp';
 import appstore from './Assets/appstore.png';
 import email from './Assets/email.png';
+import insta from './Assets/instagram.png';
 import octopus from './Assets/octopus.webp';
 import lkdn from './Assets/lkdn.png';
 import youtube from './Assets/youtube.png';
+import zita from './Assets/zita.JPG';
 import apple from './Assets/apple.JPG';
 import dark from './Assets/dark.JPG';
 import yosemite from './Assets/yosemite.JPG';
@@ -127,15 +129,30 @@ function App() {
           <a className="dlIcon" href={project.google} target="_blank"><Image src={googleplay} className="dlIcon p-0 mr-4" /></a>
         }
       </Row>
-      <Row id="about" className="mx-0">
+      <Row id="about" className="mx-0 aboutBg px-4 mt-4">
+        <h2 className="mx-auto text-center title mt-4 text-white">À propos</h2>
+        <Col md={3}>
+          <Image src={zita} className="avatar" roundedCircle/>
+          <h4 className='text-white bioTitle mt-3'>Zita Athomas</h4>
+          <h5 className='text-white bioSub mt-3'>Développeuse web / mobile</h5>
+          <p className='text-white bioDesc mt-4'>
+          Après ma première année de DUT en réseaux et télécommunications, j'ai découvert la programmation et suis devenu passionné par cet univers. J'ai ensuite intégré Epitech, une école d'informatique, dès l'année suivante.<br/><br/>
+          Mon expérience à Epitech m'a permis de développer mon autonomie et d'apprendre rapidement. J'accorde une importance particulière à l'écriture d'un code propre et soigné, ainsi qu'à un design bien pensé.<br/><br/>
+          Si vous avez besoin d'une développeuse web/mobile, n'hésitez pas à me contacter.
+          </p>
+        </Col>
         <Col>
-          <h2 className="mx-auto text-center title mt-4">À propos</h2>
+          <p className='text-white'>School</p>
+        </Col>
+        <Col>
+          <p className='text-white'>Hobbies</p>
         </Col>
       </Row>
       <Row className="footer mx-0 p-4 justify-content-center">
         <a className="footerLink" href="https://www.linkedin.com/in/zita-cheng-864891114/" target="_blank"><Image src={lkdn} className="iconSocial" /></a>
         <a className="footerLink" href="https://www.youtube.com/channel/UCohCdvYekCwfXkMXc6tt8Ag" target="_blank"><Image src={youtube} className="iconSocial" /></a>
         <a className="footerLink" href="https://github.com/zitacheng" target="_blank"><Image src={octopus} className="iconSocial" /></a>
+        <a className="footerLink" href="https://www.instagram.com/yys.zita/" target="_blank"><Image src={insta} className="iconSocial" /></a>
         <a className="footerLink" href="mailto:chengxiedan@gmail.com"><Image src={email} className="iconSocial" /></a>
         <p className="text-white text-center copyright">Copyright @ 2024 Zita athomas. All rights reserved.</p>
       </Row>

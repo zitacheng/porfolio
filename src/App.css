@@ -5,6 +5,26 @@
   padding: 0px !important
 }
 
+.aboutBg {
+  background-color: #233931;
+}
+
+.bioTitle {
+  font-family: 'Bodoni Moda';
+  font-weight: 300;
+}
+
+.bioSub {
+  font-family: 'Ysabeau SC';
+  font-weight: 200;
+}
+
+.bioDesc {
+  font-family: 'Roboto';
+  font-weight: 200;
+  text-align: justify;
+}
+
 .mockupIphone {
   height: 90%;
   width: 90%;
@@ -69,8 +89,8 @@
 }
 
 .avatar {
-  width: 600px;
-  height: 600px;
+  width: 200px;
+  height: 200px;
   object-fit:cover;
 }
 

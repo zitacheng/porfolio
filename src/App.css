@@ -10,9 +10,14 @@
   width: 90%;
 }
 
+.dlIcon {
+  width: 30px;
+  height: 30px;
+}
+
 .mockupIphone:hover {
-  transform: scale(1.5);
-  z-index: 100!important;
+  /* transform: scale(1.5);
+  z-index: 100!important; */
 }
 
 .slideInRow {
@@ -29,22 +34,20 @@
   }
 }
 
-@keyframes slidein {
-  from {
-    margin-top: 100%;
-    /* width: 300%; */
-    display: hidden;
-  }
-
-  to {
-    margin-top: 0%;
-    /* width: 100%; */
-  }
-}
-
 .role {
   font-family: 'Ysabeau SC';
   font-weight: 100;
+}
+
+.desc {
+  font-family: 'Roboto';
+  font-weight: 200;
+  font-size: large;
+}
+
+.copyright {
+  font-family: 'Roboto';
+  font-weight: 200;
 }
 
 .projectMenu {
@@ -55,6 +58,7 @@
 .projectMenu:hover {
   font-family: 'Bodoni Moda';
   font-weight: 600;
+  font-size: large;
   color: #c35b67;
 }
 
@@ -79,9 +83,9 @@
 
 .nav-link {
   color: black !important;
-  font-family: 'Ysabeau SC';
+  font-family: 'Roboto';
   /* font-family: 'Bodoni Moda'; */
-  font-weight: 500;
+  font-weight: 300;
 }
 
 .nav-link:hover {

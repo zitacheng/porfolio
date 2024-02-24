@@ -1,13 +1,16 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, {useState, useEffect} from 'react';
 import {experiences} from './constant.js';
+import www from './Assets/www.png';
+import googleplay from './Assets/googleplay.webp';
+import appstore from './Assets/appstore.png';
 import email from './Assets/email.png';
 import octopus from './Assets/octopus.webp';
 import lkdn from './Assets/lkdn.png';
 import youtube from './Assets/youtube.png';
 import apple from './Assets/apple.JPG';
 import dark from './Assets/dark.JPG';
-import bridge from './Assets/bridge.JPG';
+import yosemite from './Assets/yosemite.JPG';
 import fr from './Assets/fr.png';
 import './App.css';
 import Navbar from 'react-bootstrap/Navbar'
@@ -17,8 +20,8 @@ import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Carousel from 'react-bootstrap/Carousel';
-import Card from 'react-bootstrap/Card';
-import CardGroup from 'react-bootstrap/CardGroup';
+import Badge from 'react-bootstrap/Badge';
+import Stack from 'react-bootstrap/Stack';
 
 function App() {
 
@@ -38,8 +41,8 @@ function App() {
           <Navbar.Toggle aria-controls="basic-navbar-nav "/>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav>
-              <Nav.Link className="text-center menuItem" href="#about">À PROPOS</Nav.Link>
               <Nav.Link className="text-center menuItem" href="#experience">EXPÉRIENCES</Nav.Link>
+              <Nav.Link className="text-center menuItem" href="#about">À PROPOS</Nav.Link>
               {/* <Nav.Link className="text-center menuItem" href="#school">COMPÉTENCES</Nav.Link> */}
               {/* <Nav.Link className="text-center"><Image src={fr} className="d-inline-block flag" alt="flag icon"/></Nav.Link> */}
             </Nav>
@@ -57,7 +60,7 @@ function App() {
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
-            <Image src={bridge} text="Second slide" className="slideImg"/>
+            <Image src={yosemite} text="Second slide" className="slideImg"/>
               <Carousel.Caption>
                 <h1 className="mx-auto text-center title typewriter mt-4">Zita Athomas</h1>
                 <h4 className="mx-auto text-center sub typewriter mt-2">Développeuse Web / Mobile</h4>
@@ -76,7 +79,7 @@ function App() {
       <Row id="experience" className="mx-0 my-4">
         <h1 className="mx-auto text-center title mt-4">Expériences</h1>
         <h3 className="role text-center mb-4">{project.role}</h3>
-        <Col md={3} align="center" className='mt-3'>
+        <Col md={2} align="center" className='mt-3'>
           <Row className="mx-2">
             {experiences.map((item, idx) => (
              <p key={idx} className={item.id == project.id ? "projectMenuActive" : "projectMenu"}
@@ -88,22 +91,45 @@ function App() {
             }
           </Row>
         </Col>
-        <Col align="center" className='mt-3'>
-        <Row className="mx-0">
-          {
-            !loading && project?.img?.map((item, idx) => (
-              <Col md={item.md} className="slideInRow">
-                <Image onLoad={() => {}} key={idx} src={item.file} className="mockupIphone" />
-              </Col>
-              ))
-          }
-        </Row>
+        <Col align="center" className='mt-3 mb-0'>
+          <Row className="mx-0 mb-0">
+            {
+              !loading && project?.img?.map((item, idx) => (
+                <Col md={item.md} className="slideInRow">
+                  <Image onLoad={() => {}} key={idx} src={item.file} className="mockupIphone" />
+                </Col>
+                ))
+            }
+          </Row>
         </Col>
+      </Row>
+      <p className="desc text-center w-75 mx-auto mt-0">{project.desc}</p>
+      <Stack direction="horizontal" gap={2} className="justify-content-center mb-4">
+        {
+          project?.tech?.map((item, idx) => (
+              <Badge pill className="badge" bg="dark">
+                {item}
+              </Badge>
+            ))
+        }
+      </Stack>
+      <Row className="mx-0 justify-content-center">
+        {
+          project?.link &&
+          <a className="dlIcon" href={project.link} target="_blank"><Image src={www} className="dlIcon p-0 mr-4" /></a>
+        }
+        {
+          project?.apple &&
+          <a className="dlIcon" href={project.apple} target="_blank"><Image src={appstore} className="dlIcon p-0 mr-4" /></a>
+        }
+        {
+          project?.google &&
+          <a className="dlIcon" href={project.google} target="_blank"><Image src={googleplay} className="dlIcon p-0 mr-4" /></a>
+        }
       </Row>
       <Row id="about" className="mx-0">
         <Col>
           <h2 className="mx-auto text-center title mt-4">À propos</h2>
-          <Image src={dark} className="avatar mt-4" />
         </Col>
       </Row>
       <Row className="footer mx-0 p-4 justify-content-center">
@@ -111,7 +137,7 @@ function App() {
         <a className="footerLink" href="https://www.youtube.com/channel/UCohCdvYekCwfXkMXc6tt8Ag" target="_blank"><Image src={youtube} className="iconSocial" /></a>
         <a className="footerLink" href="https://github.com/zitacheng" target="_blank"><Image src={octopus} className="iconSocial" /></a>
         <a className="footerLink" href="mailto:chengxiedan@gmail.com"><Image src={email} className="iconSocial" /></a>
-        <p className="text-white text-center">Copyright @ 2024 Zita athomas. All rights reserved.</p>
+        <p className="text-white text-center copyright">Copyright @ 2024 Zita athomas. All rights reserved.</p>
       </Row>
     </Container>
   );

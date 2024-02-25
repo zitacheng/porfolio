@@ -85,8 +85,8 @@ function App() {
         </Col>
       </Row>
       <Row id="experience" className="mx-0 my-4">
-        <h1 className="mx-auto text-center title mt-4">{t('devMobileWeb')}</h1>
-        <h3 className="role text-center mb-4">{project.role}</h3>
+        <h1 className="mx-auto text-center title mt-4">{t('exp')}</h1>
+        <h3 className="role text-center mb-4">{t(project.role)}</h3>
         <Col md={2} align="center" className='mt-3'>
           <Row className="mx-2">
             {experiences.map((item, idx) => (
@@ -103,7 +103,7 @@ function App() {
           <Row className="mx-0 mb-0">
             {
               !loading && project?.img?.map((item, idx) => (
-                <Col md={item.md} className="slideInRow">
+                <Col md={item.md} className="bounce-in-right">
                   <Image onLoad={() => {}} key={idx} src={item.file} className="mockupIphone" />
                 </Col>
                 ))
@@ -111,7 +111,7 @@ function App() {
           </Row>
         </Col>
       </Row>
-      <p className="desc text-center w-75 mx-auto mt-0">{project.desc}</p>
+      <p className="desc text-center w-75 mx-auto mt-0">{t(project.desc)}</p>
       <Stack direction="horizontal" gap={2} className="justify-content-center mb-4">
         {
           project?.tech?.map((item, idx) => (
@@ -188,15 +188,15 @@ function App() {
         <Col md={3}>
           <h4 className='text-white subTitle mb-3'>{t('hobbies')}</h4>
           <p className="text-white lang">{t('snow')}</p>
-          <p className="text-white lang">Midjourney</p>
+          <p className="text-white lang">{t('midjourney')}</p>
           <p className="text-white lang">{t('skate')}</p>
           <p className="text-white lang">{t('travel')}</p>
         </Col>
         <Col md={3}>
-          <h4 className='text-white subTitle mb-3'>Langues</h4>
-          <p className="text-white lang" onClick={() => i18n.changeLanguage('fr')}><Image src={fr} className="flag mr-3" alt="flag icon"/>{t('fr')}</p>
-          <p className="text-white lang" onClick={() => i18n.changeLanguage('cn')}><Image src={cn} className="flag mr-3" alt="flag icon"/>{t('cn')}</p>
-          <p className="text-white lang" onClick={() => i18n.changeLanguage('en')}><Image src={us} className="flag mr-3" alt="flag icon"/>{t('en')}</p>
+          <h4 className='text-white subTitle mb-3'>{t('lang')}<span className="mini">{t('ClicktoSee')}</span></h4>
+          <p className="text-white lang" onClick={() => i18n.changeLanguage('fr')}><Image src={fr} className="flag mr-3 gelatine" alt="flag icon"/>{t('fr')}</p>
+          <p className="text-white lang" onClick={() => i18n.changeLanguage('cn')}><Image src={cn} className="flag mr-3 gelatine" alt="flag icon"/>{t('cn')}</p>
+          <p className="text-white lang" onClick={() => i18n.changeLanguage('en')}><Image src={us} className="flag mr-3 gelatine" alt="flag icon"/>{t('en')}</p>
         </Col>
         <Col md={3}>
           <h4 className='text-white subTitle mb-3'>{t('skills')}</h4>

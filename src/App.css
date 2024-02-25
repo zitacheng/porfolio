@@ -36,8 +36,13 @@
 }
 
 .mockupIphone {
-  height: 90%;
-  width: 90%;
+  height: auto;
+  width: 80%;
+}
+
+.mockupMac {
+  height: auto;
+  width: 100%;
 }
 
 .dlIcon {

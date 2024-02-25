@@ -40,7 +40,9 @@ const resources = {
       'akiusDesc': 'A website that allows you to make donations to support projects and be rewarded with NFTs',
       'tipDesc': 'A web app that allows you to tip employees of different departments.',
       'jennKimDesc': "A clothing wholesaler's mobile application allowing you to place orders.",
-      'doggerDesc': '5th year project at Epitech. A mobile application which aims to meet people with a dog nearby to walk them together. It contains geolocation, live chat and is multilingual. And I also coded a web landing page.'
+      'doggerDesc': '5th year project at Epitech. A mobile application which aims to meet people with a dog nearby to walk them together. It contains geolocation, live chat and is multilingual. And I also coded a web landing page.',
+      'cheekDesc': 'Website that sells jewellery',
+      'akiusOldDesc': "The old version of the Akius website was to do artist musical livestreams for their fans. My job was to develop an admin interface to manage events and artists"
     }
   },
   fr: {
@@ -75,10 +77,12 @@ const resources = {
       'amapopDesc': 'Application mobile dédiée aux personnes voulant échanger des Popmart sur paris.',
       'kornetDesc': 'Application mobile permettant la mise en relation entre des business angel et des porteurs de projet en levée de fonds.',
       'getbigDesc': 'Siteweb de mise en relation avec un mentor pour aider ton business.',
-      'akiusDesc': 'Un site qui permet de faire des don pour soutenir des proejts et être récompensé en NFT',
-      'tipDesc': 'A web app that allows you to give a drink to employees of different departments.',
+      'akiusDesc': 'Un site qui permet de faire des don pour soutenir des projets et être récompensé en NFT.',
+      'tipDesc': 'Une application web qui permet de donner un pour boire aux employées de différents services.',
       'jennKimDesc': 'Une application mobile de grossiste de vêtement permettant de faire des commandes.',
-      'doggerDesc': "Projet de 5e année à Epitech. Une application mobile qui a pour but de faire rencontrer des personnes ayant un chien à proximité pour les promener ensemble. Elle contient de la géolocalisation, du chat en direct et est multilingues. Et j'ai également codée une site vitrine."
+      'doggerDesc': "Projet de 5e année à Epitech. Une application mobile qui a pour but de faire rencontrer des personnes ayant un chien à proximité pour les promener ensemble. Elle contient de la géolocalisation, du chat en direct et est multilingues. Et j'ai également codée une site vitrine.",
+      'cheekDesc': 'Site de vente en détail de bijoux.',
+      'akiusOldDesc': "L'ancien version du site Akius était de faire du livestream musical pour les artistes. Mon job été de développer une interface admin pour gérer les évènements et les artists.",
     }
   },
   cn: {
@@ -116,7 +120,9 @@ const resources = {
       'akiusDesc': '您可以捐款支持项目并获得 NFT 奖励的网站。',
       'tipDesc': '可让您给不同产业的员工小费的应用程序。',
       'jennKimDesc': "您可以下订单的服装批发商的应用程序。",
-      'doggerDesc': 'Epitech大学第5年的项目。一款应用程序，目的是让附近养狗的人一起遛狗。它包含定位、实时聊天并且是多语言的。我还编写了一个网页。'
+      'doggerDesc': 'Epitech大学第5年的项目。一款应用程序，目的是让附近养狗的人一起遛狗。它包含定位、实时聊天并且是多语言的。我还编写了一个网页。',
+      'cheekDesc': '一个买首饰的网站',
+      'akiusOldDesc': "Akius的旧版是给音乐家做直播给他们的粉丝看。我的工作是开发一个管直播和音乐家的一个管理网站。"
     }
   }
 };

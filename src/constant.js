@@ -6,6 +6,8 @@ import gbf1 from './Assets/gbf1.png';
 import gbf2 from './Assets/gbf2.png';
 import akius1 from './Assets/akius1.png';
 import akius2 from './Assets/akius2.png';
+import akiusOld from './Assets/akiusOld.png';
+import akiusOld2 from './Assets/akiusOld2.png';
 import tip2 from './Assets/tip2.png';
 import tip1 from './Assets/tip1.png';
 import tip3 from './Assets/tip3.png';
@@ -20,6 +22,9 @@ import jenn1 from './Assets/jenn1.png';
 import jenn2 from './Assets/jenn2.png';
 import jenn3 from './Assets/jenn3.png';
 import jenn4 from './Assets/jenn4.png';
+import cheek1 from './Assets/cheek1.png';
+import cheek2 from './Assets/cheek2.png';
+import cheek3 from './Assets/cheek3.png';
 
 export const experiences = [
     {
@@ -46,6 +51,17 @@ export const experiences = [
     },
     {
         id: 2,
+        img: [{file: cheek1, md: 5},  {file: cheek2, md: 3}, {file: cheek3, md: 3}],
+        title: 'CheekCheek',
+        apple: '',
+        google: '',
+        link: 'https://cheek-cheek.com/',
+        role: 'frontWeb',
+        tech: ['Wordpress'],
+        desc: 'cheekDesc',
+    },
+    {
+        id: 3,
         img: [{file: gbf1, md: 5}, {file: gbf2, md: 5}],
         title: 'GetBigFast',
         apple: '',
@@ -56,9 +72,9 @@ export const experiences = [
         desc: 'getbigDesc',
     },
     {
-        id: 3,
+        id: 4,
         img: [{file: akius1, md: 5}, {file: akius2, md: 5}],
-        title: 'Akius',
+        title: 'Akius v2',
         apple: '',
         google: '',
         link: 'https://www.akius.com/',
@@ -67,7 +83,18 @@ export const experiences = [
         desc: 'akiusDesc',
     },
     {
-        id: 4,
+        id: 5,
+        img: [{file: akiusOld, md: 5}, {file: akiusOld2, md: 5}],
+        title: 'Akius v1',
+        apple: '',
+        google: '',
+        link: '',
+        role: 'frontWeb',
+        tech: ['ReactJs', 'Bootstrap'],
+        desc: 'akiusOldDesc',
+    },
+    {
+        id: 6,
         img: [{file: tip2, md: 5}, {file: tip1, md: 4}, {file: tip3, md: 3}],
         title: 'Tipitizi',
         apple: '',
@@ -78,7 +105,7 @@ export const experiences = [
         desc: 'tipDesc',
     },
     {
-        id: 5,
+        id: 7,
         img: [{file: jenn1, md: 3}, {file: jenn2, md: 3}, {file: jenn3, md: 3}, {file: jenn4, md: 3}],
         title: 'Jenn kim',
         apple: '',
@@ -89,7 +116,7 @@ export const experiences = [
         desc: 'jennKimDesc',
     },
     {
-        id: 6,
+        id: 8,
         img: [{file: dogger3, md: 2}, {file: dogger4, md: 2}, {file: dogger5, md: 6}],
         title: 'Dogger',
         apple: '',

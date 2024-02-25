@@ -104,7 +104,7 @@ function App() {
             {
               !loading && project?.img?.map((item, idx) => (
                 <Col md={item.md} className="bounce-in-right">
-                  <Image onLoad={() => {}} key={idx} src={item.file} className="mockupIphone" />
+                  <Image onLoad={() => {}} key={idx} src={item.file} className={item.md > 3 ? "mockupMac" : "mockupIphone"} />
                 </Col>
                 ))
             }
@@ -217,6 +217,7 @@ function App() {
             <Badge pill className="badge skillBg">XCode</Badge>
             <Badge pill className="badge skillBg">MySql</Badge>
             <Badge pill className="badge skillBg">Flutter</Badge>
+            <Badge pill className="badge skillBg">Wordpress</Badge>
           </Stack>
         </Col>
       </Row>

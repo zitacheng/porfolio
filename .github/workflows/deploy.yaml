@@ -24,10 +24,10 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v5
         env:
-          IMG_NAME: ghcr.io/${{ github.repository }}
+          IMG_NAME: ghcr.io/athomaj/${{ github.repository }}
         with:
           context: ./
           push: true
-          tags: ghcr.io/${{ github.repository }}:latest
+          tags: ghcr.io/athomaj${{ github.repository }}:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max

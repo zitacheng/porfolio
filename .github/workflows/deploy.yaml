@@ -16,7 +16,7 @@ jobs:
 
       - name: Log in to registry
         # This is where you will update the PAT to PAT_TOKEN
-        run: echo "${{ secrets.PAT_TOKEN }}" | docker login ghcr.io -u $ --password-stdin
+        run: echo "${{ secrets.PAT_TOKEN }}" | docker login ghcr.io -u athomaj --password-stdin
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2

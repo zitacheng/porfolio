@@ -117,7 +117,7 @@ export const experiences = [
     },
     {
         id: 8,
-        img: [{file: dogger3, md: 2}, {file: dogger4, md: 2}, {file: dogger5, md: 6}],
+        img: [{file: dogger3, md: 3}, {file: dogger4, md: 3}, {file: dogger5, md: 5}],
         title: 'Dogger',
         apple: '',
         google: '',

@@ -210,6 +210,7 @@ function App() {
             <Badge pill className="badge skillBg">REST</Badge>
             <Badge pill className="badge skillBg">NodeJs</Badge>
             <Badge pill className="badge skillBg">NextJs</Badge>
+            <Badge pill className="badge skillBg">Javascript</Badge>
             <Badge pill className="badge skillBg">GIT</Badge>
             <Badge pill className="badge skillBg">Stripe</Badge>
             <Badge pill className="badge skillBg">Redux Toolkit</Badge>

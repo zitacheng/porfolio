@@ -33,7 +33,7 @@ export const experiences = [
         title: 'Amapop',
         apple: null,
         google: null,
-        link: null,
+        link: 'https://amapop.fr/',
         role: 'fullSMob',
         tech: ['React Native', 'Strapi'],
         desc: 'amapopDesc',

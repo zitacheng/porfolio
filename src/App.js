@@ -206,6 +206,7 @@ function App() {
             <Badge pill className="badge skillBg">HTML</Badge>
             <Badge pill className="badge skillBg">CSS</Badge>
             <Badge pill className="badge skillBg">Strapi</Badge>
+            <Badge pill className="badge skillBg">npm</Badge>
             <Badge pill className="badge skillBg">Back4App</Badge>
             <Badge pill className="badge skillBg">REST</Badge>
             <Badge pill className="badge skillBg">NodeJs</Badge>

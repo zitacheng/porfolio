@@ -25,6 +25,10 @@ import jenn4 from './Assets/jenn4.png';
 import cheek1 from './Assets/cheek1.png';
 import cheek2 from './Assets/cheek2.png';
 import cheek3 from './Assets/cheek3.png';
+import koudai1 from './Assets/koudai1.png';
+import koudai2 from './Assets/koudai2.png';
+import koudai3 from './Assets/koudai3.png';
+import koudai4 from './Assets/koudai4.png';
 
 export const experiences = [
     {
@@ -125,5 +129,16 @@ export const experiences = [
         role: 'fullSMob',
         tech: ['React Native', 'ReactJs', 'Back4app'],
         desc: "doggerDesc",
+    },
+    {
+        id: 9,
+        img: [{file: koudai1, md: 3}, {file: koudai2, md: 3}, {file: koudai3, md: 3}, {file: koudai4, md: 3}],
+        title: 'Koudai',
+        apple: '',
+        google: '',
+        link: null,
+        role: 'fullSMob',
+        tech: ['React Native'],
+        desc: "koudaiDesc",
     },
 ]

@@ -42,7 +42,15 @@ const resources = {
       'jennKimDesc': "A clothing wholesaler's mobile application allowing you to place orders.",
       'doggerDesc': '5th year project at Epitech. A mobile application which aims to meet people with a dog nearby to walk them together. It contains geolocation, live chat and is multilingual. And I also coded a web landing page.',
       'cheekDesc': 'Website that sells jewellery',
-      'akiusOldDesc': "The old version of the Akius website was to do artist musical livestreams for their fans. My job was to develop an admin interface to manage events and artists"
+      'akiusOldDesc': "The old version of the Akius website was to do artist musical livestreams for their fans. My job was to develop an admin interface to manage events and artists",
+      'koudaiDesc': "The Skull King Scoring App makes it easy to track scores for the Skull King card game. Players enter their bids and tricks, and the app automatically calculates scores and bonuses according to the official rules. It supports multiple players and keeps score round by round so you can focus on the game. And other ini games will be implemented as well in the future.",
+      'contact': "Contact",
+      'name': 'Name',
+      'email': 'Email',
+      'message': 'Message',
+      'send': 'Send',
+      'climb': 'Climbing',
+      'run': 'Running'
     }
   },
   fr: {
@@ -67,7 +75,7 @@ const resources = {
       'cn': 'Chinois',
       'bio1': "Après ma première année de DUT en réseaux et télécommunications, j'ai découvert la programmation et suis devenu passionné par cet univers. J'ai ensuite intégré Epitech, une école d'informatique, dès l'année suivante.",
       'bio2': "Mon expérience à Epitech m'a permis de développer mon autonomie et d'apprendre rapidement. J'accorde une importance particulière à l'écriture d'un code propre et soigné, ainsi qu'à un design bien pensé.",
-      'bio3': "Acutellement à Marseille, si vous avez besoin d'une développeuse web/mobile, n'hésitez pas à me contacter.",
+      'bio3': "Actuellement à Marseille, si vous avez besoin d'une développeuse web/mobile, n'hésitez pas à me contacter.",
       'r&t': 'IUT Réseaux & Télécommunication',
       'epitechM': "École d'expert en ingénierie informatique logicielle.",
       'lbYear': "Année d'échange à Long Beach aux Etats-Unis dans le département informatique.",
@@ -83,6 +91,14 @@ const resources = {
       'doggerDesc': "Projet de 5e année à Epitech. Une application mobile qui a pour but de faire rencontrer des personnes ayant un chien à proximité pour les promener ensemble. Elle contient de la géolocalisation, du chat en direct et est multilingues. Et j'ai également codée une site vitrine.",
       'cheekDesc': 'Site de vente en détail de bijoux.',
       'akiusOldDesc': "L'ancien version du site Akius était de faire du livestream musical pour les artistes. Mon job été de développer une interface admin pour gérer les évènements et les artists.",
+      'koudaiDesc': "L'application Skull King Scoring App permet de suivre facilement les scores du jeu de cartes Skull King. Les joueurs saisissent leurs annonces et leurs plis, et l'application calcule automatiquement les scores et bonus selon les règles officielles. Elle prend en charge plusieurs joueurs, affiche les scores manche par manche et d'autres mini-jeux seront ajoutés à l'avenir.",
+      'contact': "Contact",
+      'name': 'Nom',
+      'email': 'Email',
+      'message': 'Message',
+      'send': 'Envoyer',
+      'climb': 'Escalade Bloc et falaise',
+      'run': 'course à pied'
     }
   },
   cn: {
@@ -122,7 +138,15 @@ const resources = {
       'jennKimDesc': "您可以下订单的服装批发商的应用程序。",
       'doggerDesc': 'Epitech大学第5年的项目。一款应用程序，目的是让附近养狗的人一起遛狗。它包含定位、实时聊天并且是多语言的。我还编写了一个网页。',
       'cheekDesc': '一个买首饰的网站',
-      'akiusOldDesc': "Akius的旧版是给音乐家做直播给他们的粉丝看。我的工作是开发一个管直播和音乐家的一个管理网站。"
+      'akiusOldDesc': "Akius的旧版是给音乐家做直播给他们的粉丝看。我的工作是开发一个管直播和音乐家的一个管理网站。",
+      'koudaiDesc': "Skull King 计分应用让追踪 Skull King 纸牌游戏的得分变得简单。玩家输入叫牌和赢得的墩数，应用会根据官方规则自动计算分数和奖励。应用支持多名玩家，按回合显示得分，未来还将加入更多迷你游戏。",
+      'contact': "联系",
+      'name': '姓名',
+      'email': '邮箱',
+      'message': '留言',
+      'send': '发送',
+      'climb': '攀岩',
+      'run': '跑步'
     }
   }
 };

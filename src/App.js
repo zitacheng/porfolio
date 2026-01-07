@@ -51,6 +51,7 @@ function App() {
             <Nav>
               <Nav.Link className="text-center menuItem text-uppercase" href="#experience">{t('exp')}</Nav.Link>
               <Nav.Link className="text-center menuItem text-uppercase" href="#about">{t('about')}</Nav.Link>
+              <Nav.Link className="text-center menuItem text-uppercase" href="#contact">{t('contact')}</Nav.Link>
               {/* <Nav.Link className="text-center menuItem" href="#school">COMPÉTENCES</Nav.Link> */}
               {/* <Nav.Link className="text-center"><Image src={fr} className="d-inline-block flag" alt="flag icon"/></Nav.Link> */}
             </Nav>
@@ -114,7 +115,7 @@ function App() {
       <p className="desc text-center w-75 mx-auto mt-0">{t(project.desc)}</p>
       <Stack direction="horizontal" gap={2} className="justify-content-center mb-4">
         {
-          project?.tech?.map((item, idx) => (
+          project?.tech?.map((item, _idx) => (
               <Badge pill className="badge" bg="dark">
                 {item}
               </Badge>
@@ -187,9 +188,9 @@ function App() {
       <Row id="about" className="mx-0 aboutBg px-4 mt-0 justify-content-center">
         <Col md={3}>
           <h4 className='text-white subTitle mb-3'>{t('hobbies')}</h4>
+          <p className="text-white lang">{t('climb')}</p>
           <p className="text-white lang">{t('snow')}</p>
-          <p className="text-white lang">{t('midjourney')}</p>
-          <p className="text-white lang">{t('skate')}</p>
+          <p className="text-white lang">{t('run')}</p>
           <p className="text-white lang">{t('travel')}</p>
         </Col>
         <Col md={3}>
@@ -223,6 +224,64 @@ function App() {
           </Stack>
         </Col>
       </Row>
+      <Row id="contact" className="mx-0 contactBg px-4 pt-4 pb-4 justify-content-center">
+        <h2 className="mx-auto text-center title my-4 text-white">
+          {t('contact')}
+        </h2>
+        <Col md={6}>
+          <form
+            action="mailto:chengxiedan@gmail.com"
+            method="POST"
+            encType="text/plain"
+          >
+            {/* Name */}
+            <div className="mb-3">
+              <label className="text-white mb-1">
+                {t('name')}
+              </label>
+              <input
+                type="text"
+                name="name"
+                className="form-control"
+                required
+              />
+            </div>
+
+            {/* Email */}
+            <div className="mb-3">
+              <label className="text-white mb-1">
+                {t('email')}
+              </label>
+              <input
+                type="email"
+                name="email"
+                className="form-control"
+                required
+              />
+            </div>
+
+            {/* Message */}
+            <div className="mb-4">
+              <label className="text-white mb-1">
+                {t('message')}
+              </label>
+              <textarea
+                name="message"
+                rows="5"
+                className="form-control"
+                required
+              />
+            </div>
+
+            {/* Submit */}
+            <div className="text-center">
+              <button type="submit" className="btn btn-light px-4">
+                {t('send')}
+              </button>
+            </div>
+          </form>
+        </Col>
+      </Row>
       <Row className="footer mx-0 p-4 justify-content-center">
         <a className="footerLink" href="https://www.linkedin.com/in/zita-cheng-864891114/" target="_blank"><Image src={lkdn} className="iconSocial" /></a>
         <a className="footerLink" href="https://www.youtube.com/channel/UCohCdvYekCwfXkMXc6tt8Ag" target="_blank"><Image src={youtube} className="iconSocial" /></a>
@@ -232,7 +291,7 @@ function App() {
         <p className="text-white text-center copyright">Copyright @ 2024 Zita athomas. All rights reserved.</p>
       </Row>
     </Container>
-  );
+  )
 }
 
 export default App;
